@@ -1,0 +1,161 @@
+:root {
+  --blueberry-main: #4e7efc; /* اللون الرئيسي */
+  --blueberry-light: #7aa7ff; /* لون فاتح للـ hover */
+  --blueberry-dark: #1a1a1a; /* للخطوط */
+  font-family: 'Cairo', Arial, sans-serif;
+}
+
+/* Cover Section */
+.cover {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+  border-bottom: 6px solid var(--blueberry-main);
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  overflow: hidden;
+  margin: -80px auto 0; /* يخلي الصورة فوق الحافة */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Name */
+.name {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blueberry-dark);
+}
+
+/* Social Buttons */
+.social-btn {
+  background: #fff;
+  border-left: 6px solid var(--blueberry-main);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  background: var(--blueberry-main);
+  color: #fff !important;
+}
+
+.social-btn i {
+  font-size: 1.8rem;
+  margin-right: 14px;
+  color: var(--blueberry-main);
+  transition: color 0.3s ease;
+}
+
+.social-btn:hover i {
+  color: #fff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+  .name {
+    margin-top: 0px;
+    font-size: 1.5rem;
+  }
+  .social-btn {
+    padding: 12px 16px;
+  }
+}
+
+/* Splash Screen */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.splash-content {
+  text-align: center;
+  color: white;
+  animation: zoomIn 0.8s ease;
+}
+
+.splash-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.splash-logo:hover {
+  transform: scale(1.1);
+}
+
+.splash-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.splash-subtitle {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
