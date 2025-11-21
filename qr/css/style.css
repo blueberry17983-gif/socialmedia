@@ -1,0 +1,23 @@
+.qr-card {
+  width: 220px;
+  padding: 20px;
+  margin: 20px auto 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #4e7efc, #7aa7ff); /* Gradient رايق */
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Shadow خفيف */
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.qr-text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
